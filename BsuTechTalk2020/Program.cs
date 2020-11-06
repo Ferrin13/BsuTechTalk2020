@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using BsuTechTalk2020;
 
-namespace NoMonads
+namespace StringFormatter
 {
   public class Program
   {
@@ -19,7 +18,8 @@ namespace NoMonads
     private static string GetInput()
     {
       Console.WriteLine("Enter string to transform:");
-      return Console.ReadLine();
+      var input = Console.ReadLine();
+      return input != string.Empty ? input : null;
     }
 
     private static List<string> GetTransformations(string input)
